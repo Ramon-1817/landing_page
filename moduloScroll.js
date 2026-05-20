@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const activeIndex = Math.min(
                 Math.floor(progress / segmentSize),
-                totalCards - 1,
+                totalCards - 1
             );
             const segProgress = (progress - activeIndex * segmentSize) /
             segmentSize;
@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
                         scale: 1,
                     });
                 } else {
-                    const behindIdex = i - activeIndex;
-                    const currentYOffset = (behindIdex - segProgress) * cardYOffset;
-                    const currentScale = 1 - (behindIdex - segProgress) *
+                    const behindIndex = i - activeIndex;
+                    const currentYOffset = (behindIndex - segProgress) * cardYOffset;
+                    const currentScale = 1 - (behindIndex - segProgress) *
                     cardScaleStep;
 
                     gsap.set(card, {
