@@ -1,7 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+        duration: 0.8,
+        smoothWheel: true,
+        });
     lenis.on("scroll", ScrollTrigger.update);
     gsap.ticker.add((time) => {
         lenis.raf(time * 1000);
@@ -26,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         trigger: ".sticky-cards",
         start: "top top",
-        end: `+=${window.innerHeight * 8}px`,
+        end: `+=${window.innerHeight * 4}px`,
         pin: true,
         pinSpacing: true,
-        scrub: 1,
+        scrub: 0,4,
         onUpdate: (self) => {
             const progress = self.progress;
 
