@@ -54,12 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     gsap.set(card, {
                         yPercent: gsap.utils.interpolate(-50, -200, segProgress),
                         rotationX: gsap.utils.interpolate(0, 35, segProgress),
-                        scale: 1,
+                        scale: 1
                     });
                 } else {
-                    const behindIdex = i - activeIndex;
-                    const currentYOffset = (behindIdex - segProgress) * cardYOffset;
-                    const currentScale = 1 - (behindIdex - segProgress) *
+                    const behindIndex = i - activeIndex;
+                    const currentYOffset = (behindIndex - segProgress) * cardYOffset;
+                    const currentScale = 1 - (behindIndex - segProgress) *
                     cardScaleStep;
 
                     gsap.set(card, {

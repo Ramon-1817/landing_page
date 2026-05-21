@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/bebas-neue');
+/*@import url('https://fonts.cdnfonts.com/css/bebas-neue');
 @import url('https://fonts.cdnfonts.com/css/poppins');
 
 body{
@@ -14,9 +14,9 @@ body{
 :root{
     --width-df: min(1200px, 90vw);
     --diameter: 500px;
-}
+}*/
 
-a{
+/*a{
     font-family: sans-serif;
     text-decoration: none;
 }
@@ -34,8 +34,8 @@ nav{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}
-nav li{
+}*/
+/*nav li{
     height: 60px;
 }
 .logo{
@@ -75,9 +75,9 @@ nav li{
     margin-top: 5px;
     position: relative;
     transition: 0,3s;
-}
+}*/
 
-*header{
+/**header{
     width: var(--width-df);
     height: 70px;
     margin: auto;
@@ -86,10 +86,10 @@ nav li{
     align-items: center;
     position: relative;
     z-index: 1;
-}
+}*/
 
 /* Slider */
-.slider{
+/*.slider{
     color: #eee;
     width: 100%;
     height: 100vh;
@@ -127,10 +127,10 @@ nav li{
     display: flex;
     align-items: end;
     padding-bottom: 25px;
-}
+}*/
 
 /* IMAGENS */
-.slider .list .image{
+/*.slider .list .image{
     flex-shrink: 0;
     width: var(--diameter);
     height: var(--diameter);
@@ -160,12 +160,12 @@ nav li{
     width: 30%;
     height: 30%;
     background-image: var(--url);
-}
+}*/
 
 /* ANIMAÇÕES */
 
 /* item que vem antes dos item ativo */
-.slider .list .content h2{
+/*.slider .list .content h2{
     transform: translateY(-100%);
     transition: transform 1s;
 }
@@ -186,10 +186,10 @@ nav li{
     pointer-events: none;
     opacity: 0;
     transition: opacity 1s;
-}
+}*/
 
 /* item ativo */
-.slider .list .item.active{
+/*.slider .list .item.active{
     opacity: 1;
     pointer-events: auto;
 }
@@ -203,10 +203,10 @@ nav li{
 .slider .list .item.active .image::before,
 .slider .list .item.active .image::after{
     transform: translate(-50%, -50%) rotate(0);
-}
+}*/
 
 /* item que vem após o item ativo */
-.slider .list .item.active ~ .item{
+/*.slider .list .item.active ~ .item{
     opacity: 0;
 }
 .slider .list .item.active ~ .image .content h2{
@@ -221,10 +221,10 @@ nav li{
 }
 .slider .list .item.active ~ .item .image::after{
     transform: translate(-50%, -50%) rotate(170deg);
-}
+}*/
 
 /* SETAS */
-.arrows{
+/*.arrows{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -250,9 +250,9 @@ nav li{
     background-position: top;
     pointer-events: none;
     animation: showModel 1s ease-in-out 1 forwards;
-}
+}*/
 
-@keyframes showModel{
+/*@keyframes showModel{
     from{
         transform: translateX(-50%) scale(1.5) translateY(88px);
     }
@@ -260,16 +260,16 @@ nav li{
 .arrows button.d-none{
     opacity: 0;
     pointer-events: none;
-}
+}*/
 
 /* RESPONSIVIDADE */
-@media all and (max-width: 1440px){
+/*@media all and (max-width: 1440px){
     .slider .list .item .content{
         grid-template-columns: repeat(2, 300px);
         gap: 100px;
     }
-}
-@media all and (max-width: 767px){
+}*/
+/*@media all and (max-width: 767px){
     .slider .list .item .content{
         grid-template-columns: 80vw;
         gap: 20px;
@@ -284,9 +284,9 @@ nav li{
         padding-left: 30%;
         transform:  translateY(-30px);
     }
-}
+}*/
 
-@media (max-width: 767px){
+/*@media (max-width: 767px){
     .hamburguer{
         display: block;
         z-index: 1;
@@ -330,9 +330,9 @@ nav li{
     }
     .nav-list li:nth-child(4) a{
         transition: 0,5s 0,8s;
-    }
+    }*/
 /* Estilos ativo*/
-    .nav.active .nav-list{
+/*    .nav.active .nav-list{
         clip-path: circle(1500px at 90% -20%);
         pointer-events: all;
     }
@@ -352,4 +352,4 @@ nav li{
         transform: rotate(-135deg);
         top: -7px;
     }
-}
+}*/
