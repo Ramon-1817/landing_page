@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const activeIndex = Math.min(
                 Math.floor(progress / segmentSize),
-                totalCards - 1,
+               totalCards - 1,
             );
             const segProgress = (progress - activeIndex * segmentSize) /
             segmentSize;
