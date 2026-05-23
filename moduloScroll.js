@@ -50,12 +50,12 @@ document.addEventListener("DOMContentLoaded", () => {
                     gsap.set(card, {
                         yPercent: -180,
                         rotationX: 35,
-                        opacity: 0.25,
+                        opacity: 0.5,
                         scale: 0.85,
                     });
                 } else if (i == activeIndex) {
                     gsap.set(card, {
-                        yPercent: gsap.utils.interpolate(-50, -200, segProgress),
+                        yPercent: gsap.utils.interpolate(-50, -110, segProgress),
                         rotationX: gsap.utils.interpolate(0, 35, segProgress),
                         scale: 1
                     });
