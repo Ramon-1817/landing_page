@@ -1,29 +1,25 @@
 let items = document.querySelectorAll('.slider .item');
-let prevBtn = document.getElementById('prev');
-let nextBtn = document.getElementById('next');
 let lastPosition = items.length - 1;
 let firstPosition = 0;
-let active = 1;
 
-nextBtn.onclick = () => {
-    active++;
+const darkToggle = document.getElementById('darkmode-toggle');
+
+let active = darkToggle.checked ? 0 : 1;
+
+darkToggle.addEventListener('change', () => {
+    active = darkToggle.checked ? 0 : 1;
+
     setSlider();
-}
-prevBtn.onclick = () => {
-    active--;
-    setSlider();
-}
+});
 
 const setSlider = () => {
     let oldActive = document.querySelector('.slider .item.active');
     if(oldActive) oldActive.classList.remove('active');
-    items[active].classList.add('active');
-
-    nextBtn.classList.remove('d-none');
-    prevBtn.classList.remove('d-none');
-    if(active == lastPosition) nextBtn.classList.add('d-none');
-    if(active == firstPosition) prevBtn.classList.add('d-none');
+    requestAnimationFrame(() => {
+        items[active].classList.add('active');
+    });
 }
+
 setSlider();
 
 const setDiameter = () => {
