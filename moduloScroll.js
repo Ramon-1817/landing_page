@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         trigger: ".sticky-cards",
         start: "top top",
-        end: `+=${window.innerHeight * 2}px`,
+        end: `+=${window.innerHeight * 1.2}px`,
         pin: true,
         pinSpacing: true,
         scrub: 0.3,
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cards.forEach((card, i) => {
                 if (i < activeIndex) {
                     gsap.set(card, {
-                        yPercent: -250,
+                        yPercent: -180,
                         rotationX: 35,
                         opacity: 0.25,
                         scale: 0.85,
