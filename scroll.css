@@ -49,12 +49,38 @@ section {
 
 /* IMAGENS */
 .sticky-cards {
-    background-color: #e3e3db;
+    position: relative;
     perspective: 850px;
+    background:
+        radial-gradient(
+            circle at center,
+            #f5f5f0 0%,
+            #d8d8d0 45%,
+            #bdbdb5 100%
+        );
+    overflow: hidden;
+}
+
+.bg-transition{
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.08),
+        rgba(0,0,0,0.28)
+        );
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+    will-change: opacity;
 }
 
 .sticky-cards .card {
     position: absolute;
+    z-index: 2;
     top: 50%;
     left: 50%;
     width: 65%;

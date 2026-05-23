@@ -34,17 +34,24 @@ document.addEventListener("DOMContentLoaded", () => {
             const progress = self.progress;
 
             const activeIndex = Math.min(
-                Math.floor(progress / segmentSize),
+               Math.floor(progress / segmentSize),
                totalCards - 1,
             );
             const segProgress = (progress - activeIndex * segmentSize) /
             segmentSize;
+
+            gsap.to(".bg-transition", {
+                opacity: progress,
+                duration: 0.3,
+            });
 
             cards.forEach((card, i) => {
                 if (i < activeIndex) {
                     gsap.set(card, {
                         yPercent: -250,
                         rotationX: 35,
+                        opacity: 0.25,
+                        scale: 0.85,
                     });
                 } else if (i == activeIndex) {
                     gsap.set(card, {
