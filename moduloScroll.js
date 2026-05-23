@@ -55,9 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 } else if (i == activeIndex) {
                     gsap.set(card, {
-                        yPercent: gsap.utils.interpolate(-50, -200, segProgress),
+                        yPercent: gsap.utils.interpolate(-50, -110, segProgress),
                         rotationX: gsap.utils.interpolate(0, 35, segProgress),
-                        scale: 1
+                        scale: 1,
+                        opacity: 1,
                     });
                 } else {
                     const behindIndex = i - activeIndex;
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         yPercent: -50 + currentYOffset,
                         rotationX: 0,
                         scale: currentScale,
+                        opacity: 1,
                     });
                 }
             });
