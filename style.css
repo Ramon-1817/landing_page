@@ -96,6 +96,30 @@ nav li{
     overflow: hidden;
     margin-top: -70px;
     position: relative;
+
+.slider .item{
+    transition:
+        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 1.2s ease;
+}
+
+.slider .item .image{
+    transition:
+        transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 1.2s ease;
+
+    filter:
+        brightness(0.92)
+        saturate(1.05);
+}
+
+.slider .item.active .image{
+    filter:
+    brightness(1)
+    saturate(1.1);
+}
+
 }
 .slider .list .item{
     position: absolute;

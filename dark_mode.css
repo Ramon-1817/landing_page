@@ -17,7 +17,7 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 20px rgba(0,0,0,0.25), inset 0 1px 1px rgba(255,255,255,0.08);
     cursor: pointer;
-    transition: 0.3s;
+    transition: background 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1), border 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .dark-mode label:after {
@@ -30,7 +30,7 @@
     background: linear-gradient(180deg, #ffcc89, #d8d60b);
     border-radius: 180px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
+    transition: left 0.55s cubic-bezier(0.22, 1, 0.36, 1), width 0.35s cubic-bezier(0.22, 1, 0.36, 1), background 0.5s ease, box-shadow 0.5s ease;
 }
 
 .dark-mode input {
@@ -50,7 +50,7 @@ input:checked + label{
 }
 
 .dark-mode label:active:after {
-    width: 62px;
+    width: 56px;
 }
 
 .dark-mode input:checked + label:active:after {
@@ -68,13 +68,13 @@ input:checked + label{
 .dark-mode label svg.sol {
     left: 14px;
     fill: #fff;
-    transition: 0.3s;
+    transition: fill 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
 }
 
 .dark-mode label svg.lua {
     left: 73px;
     fill: #7e7e7e;
-    transition: 0.3s;
+    transition: fill 0.45s ease, opacity 0.45s ease, transform 0.45s ease;
 }
 
 .dark-mode input:checked + label svg.sol {
