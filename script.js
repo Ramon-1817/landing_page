@@ -17,10 +17,50 @@ const setSlider = () => {
     if(oldActive) oldActive.classList.remove('active');
     requestAnimationFrame(() => {
         items[active].classList.add('active');
+        requestAnimationFrame(() => {
+            animateSplitTitle();
+        });
     });
 }
 
 setSlider();
+
+// Animação do texto
+
+function animateSplitTitle() {
+
+    const activeTitle = document.querySelector('.item.active .split-title');
+
+    if (!activeTitle) return;
+
+    // RESET TOTAL DO HTML
+    SplitType.revert(activeTitle);
+
+    // NOVO SPLIT
+    const split = new SplitType(activeTitle, {
+        types: 'words, chars'
+    });
+
+    // ESTADO INICIAL
+    gsap.set(split.chars, {
+        opacity: 0,
+        y: 120,
+    });
+
+    // ANIMAÇÃO
+    gsap.to(split.chars, {
+        opacity: 1,
+        y: 0,
+        delay: 0.97,
+        stagger: 0.035,
+        duration: 3.1,
+        ease: "expo.out"
+    });
+}
+
+animateSplitTitle();
+
+// Clique do menu hamburguer
 
 const setDiameter = () => {
     let slider = document.querySelector('.slider');
