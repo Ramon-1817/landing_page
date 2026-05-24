@@ -359,27 +359,32 @@ nav li{
         line-height: 1em;
     }
 }
+
 @media all and (max-width: 767px){
+
     .slider .list .item .content{
         gap: 20px;
         top: 70px;
     }
 
     .slider .list .item .content h2{
-        font-size: 2.4em;
-        line-height: 1em;
+        font-size: 1.9em;
+        line-height: 0.95em;
     }
 
     .split-title .word{
-        white-space: normal;
+        white-space: nowrap;
     }
 
-    .top-name .char{
-        margin-right: 0.12em;
+    .top-name{
+        font-size: 0.72em;
+        letter-spacing: 0.12em;
     }
+
     .slider .list .item .content{
         left: 50%;
         transform: translateX(-50%);
+        width: calc(100% - 40px);
     }
 }
 
