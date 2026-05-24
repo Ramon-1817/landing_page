@@ -70,7 +70,7 @@ section {
         rgba(255,255,255,0.08),
         rgba(0,0,0,0.28)
         );
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(4px);
     opacity: 0;
     transition: opacity 0.4s ease;
     pointer-events: none;
@@ -94,6 +94,8 @@ section {
     color: #fff;
     transform-origin: center bottom;
     will-change: transform;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
 
 .card .col {

@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.create({
         trigger: ".sticky-cards",
         start: "top top",
-        end: `+=${window.innerHeight * 1.2}px`,
+        end: `+=${window.innerHeight * 2}px`,
         pin: true,
         pinSpacing: true,
         scrub: 0.3,
@@ -34,31 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
             const progress = self.progress;
 
             const activeIndex = Math.min(
-               Math.floor(progress / segmentSize),
+                Math.floor(progress / segmentSize),
                totalCards - 1,
             );
             const segProgress = (progress - activeIndex * segmentSize) /
             segmentSize;
 
-            gsap.to(".bg-transition", {
-                opacity: progress,
-                duration: 0.3,
-            });
-
             cards.forEach((card, i) => {
                 if (i < activeIndex) {
                     gsap.set(card, {
-                        yPercent: -180,
+                        yPercent: -250,
                         rotationX: 35,
-                        opacity: 0.5,
-                        scale: 0.85,
                     });
                 } else if (i == activeIndex) {
                     gsap.set(card, {
-                        yPercent: gsap.utils.interpolate(-50, -110, segProgress),
+                        yPercent: gsap.utils.interpolate(-50, -200, segProgress),
                         rotationX: gsap.utils.interpolate(0, 35, segProgress),
-                        scale: 1,
-                        opacity: 1,
+                        scale: 1
                     });
                 } else {
                     const behindIndex = i - activeIndex;
@@ -70,7 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         yPercent: -50 + currentYOffset,
                         rotationX: 0,
                         scale: currentScale,
-                        opacity: 1,
                     });
                 }
             });
