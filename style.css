@@ -258,16 +258,20 @@ nav li{
 
 /* Animações das imagens */
 .slider .list .item .image{
-    transform: rotate(-60deg);
+    transform: scale(1.18);
     filter: blur(30px);
-    transition: 1s;
+    opacity: 0;
+    transition:
+        transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 1.4s ease,
+        opacity 1.2s ease;
 }
 .slider .list .item .image::before{
-    transform: translate(-50%, -50%) rotate(-120deg);
+    transform: translate(-50%, -50%) scale(1.2);
     transition: transform 1s;
 }
 .slider .list .item .image::after{
-    transform: translate(-50%, -50%) rotate(-170deg);
+    transform: translate(-50%, -50%) scale(0.8);
     transition: transform 1s;
 }
 .slider .list .item{
@@ -284,12 +288,13 @@ nav li{
     transform: translateY(0);
 }
 .slider .list .item.active .image{
-    transform: rotate(0);
+    transform: scale(1);
     filter: blur(0);
+    opacity: 1;
 }
 .slider .list .item.active .image::before,
 .slider .list .item.active .image::after{
-    transform: translate(-50%, -50%) rotate(0);
+    transform: translate(-50%, -50%) scale(1);
 }
 
 /* item que vem após o item ativo */
@@ -368,8 +373,10 @@ nav li{
     }
 
     .slider .list .item .content h2{
-        font-size: 1.9em;
+        font-size: 1.55em;
         line-height: 0.95em;
+        overflow-wrap: normal;
+        word-break: keep-all;
     }
 
     .split-title .word{
@@ -384,7 +391,7 @@ nav li{
     .slider .list .item .content{
         left: 50%;
         transform: translateX(-50%);
-        width: calc(100% - 40px);
+        width: calc(100% - 24px);
     }
 }
 
